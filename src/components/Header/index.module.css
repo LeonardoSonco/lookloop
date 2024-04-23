@@ -1,0 +1,58 @@
+.hideMenuNav {
+  display: none;
+}
+.showMenuNav {
+  display: block;
+  position: fixed;
+  width: 200px;
+  max-width: 200px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #413b6b;
+  z-index: 10;
+  display: flex;
+
+  font-size: 18px;
+  color: white;
+  flex-direction: column;
+  /*justify-content: start;*/
+  padding-top: 70px;
+  /*align-items: center;*/
+  text-align: end;
+  transition: all;
+  /*transition-duration: 1000ms;*/
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0%; /* metade da tela */
+  width: 50%; /* metade da tela */
+  height: 100%;
+  background-color: rgba(
+    124,
+    124,
+    124,
+    0.5
+  ); /* cor cinza com 50% de opacidade */
+  z-index: 5;
+}
+
+.submenu {
+  width: 100%;
+  padding: 10px 0px 10px 10px;
+}
+
+.submenu li {
+  list-style-type: none;
+  padding: 5px 0;
+  cursor: pointer;
+  color: #2200ff00;
+}
+
+.menuHover li:hover {
+  background: rgba(255, 255, 255, 0.301);
+  border-left: 5px solid white;
+}
+
+
