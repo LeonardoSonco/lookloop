@@ -2,33 +2,33 @@
 import React, { ReactNode, createContext, useContext, useState } from "react";
 
 interface MenuContextType {
-  windowSize: number;
+  pageActive: string;
   isNavOpen: boolean;
   setIsNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  setWindowSize: React.Dispatch<React.SetStateAction<number>>;
+  setPageActive: React.Dispatch<React.SetStateAction<string>>;
 }
 interface MenuProviderProps {
   children: ReactNode;
 }
 
 const MenuContext = createContext<MenuContextType>({
-  windowSize: 0,
+  pageActive: '',
   isNavOpen: false,
   setIsNavOpen: () => {},
-  setWindowSize: () => {},
+  setPageActive: () => {},
 });
 
 export const useMenuContext = () => useContext(MenuContext);
 
 export const MenuProvider: React.FC<MenuProviderProps> = ({ children }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [windowSize, setWindowSize] = useState<number>(innerWidth);
+  const [pageActive, setPageActive] = useState<string>('companyProfile');
 
 
   
   return (
     <MenuContext.Provider
-      value={{ windowSize, isNavOpen, setIsNavOpen, setWindowSize }}
+      value={{ pageActive, isNavOpen, setIsNavOpen, setPageActive }}
     >
       {children}
     </MenuContext.Provider>

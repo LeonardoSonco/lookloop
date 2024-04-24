@@ -23,7 +23,7 @@ const CompanyProfilePage: React.FC = () => {
       <div className="max-w-5xl my-10 mx-5 shadow-shadowBox rounded-3xl p-8">
         <ul className="flex flex-wrap gap-5 align-middle">
           <li className="pr-5">
-            <span className="font-bold">Nome da Empresa:</span> Bosky Barbearia
+            <span className="font-bold">Nome da Empresa:</span> Pit Barbearia
           </li>
           <li className="pr-5">
             <span className="font-bold">Celular:</span> (68) 99953-9519
@@ -32,7 +32,7 @@ const CompanyProfilePage: React.FC = () => {
             <span className="font-bold">Telefone: </span>(68) 3567-1295
           </li>
           <li className="pr-5">
-            <span className="font-bold">E-mail:</span> boskybarbearia@gmail.com
+            <span className="font-bold">E-mail:</span> Pitbarbearia@gmail.com
           </li>
           <li className="pr-5">
             <span className="font-bold">CNPJ:</span> 91.979.225/0001-97{" "}
@@ -46,19 +46,19 @@ const CompanyProfilePage: React.FC = () => {
         >
           <li className="flex gap-2">
             <Facebook />
-            boskybarbearia
+            Pitbarbearia
           </li>
           <li className="flex gap-2">
             <Instagram />
-            boskybarbearia{" "}
+            Pitbarbearia{" "}
           </li>
           <li className="flex gap-2">
             <Twitter />
-            boskybarbearia
+            Pitbarbearia
           </li>
           <li className="flex gap-2">
             <Aperture />
-            @boskybarberia
+            @Pitbarberia
           </li>
         </ul>
 
@@ -72,11 +72,11 @@ const CompanyProfilePage: React.FC = () => {
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum
         </p>
+        <ChangeButton />
       </div>
 
       <div className="flex flex-wrap">
         <div className="shadow-shadowBox rounded-3xl p-8 w-fit mx-5">
-          
           <ul className="flex flex-col gap-2">
             <li>
               <span className="font-bold ">Cep:</span> 97547-100
@@ -101,14 +101,15 @@ const CompanyProfilePage: React.FC = () => {
         </div>
 
         <div className="shadow-shadowBox rounded-3xl p-8 w-fit mx-5 min-h-72">
-
-          
-
           <ul className="flex flex-wrap gap-8 min-h-48">
             {companyProfileImages &&
               companyProfileImages.map((image) => (
                 <li>
-                  <img src={image} className="rounded-md" alt="Imagens para demonstrar sua empresa." />
+                  <img
+                    src={image}
+                    className="rounded-md"
+                    alt="Imagens para demonstrar sua empresa."
+                  />
                 </li>
               ))}
           </ul>

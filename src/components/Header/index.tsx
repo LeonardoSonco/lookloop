@@ -4,7 +4,7 @@ import { useMenuContext } from "../../context/MenuContext";
 
 const Header: React.FC = () => {
   //const [isNavOpen, setIsNavOpen] = useState(false);
-  const { isNavOpen, setIsNavOpen, setWindowSize } = useMenuContext();
+  const { isNavOpen, setIsNavOpen, pageActive,setPageActive } = useMenuContext();
 
   return (
     <header
@@ -22,7 +22,6 @@ const Header: React.FC = () => {
             } `}
             onClick={() => {
               setIsNavOpen((prev) => !prev);
-              setWindowSize(innerWidth - 200);
             }}
           >
             <span className="block h-1 w-9 bg-greenHamburguer rounded-sm"></span>
@@ -35,7 +34,6 @@ const Header: React.FC = () => {
               className="CROSS-ICON absolute top-0 left-0 pl-8  pr-3 pt-6 flex w-full justify-between items-center"
               onClick={() => {
                 setIsNavOpen(false);
-                setWindowSize(innerWidth);
               }}
             >
               <h1 className="text-white text-2xl font-semibold">LookLoop</h1>
@@ -56,11 +54,11 @@ const Header: React.FC = () => {
             <ul
               className={`flex flex-col  w-full text-start gap-1 ${style.menuHover}`}
             >
-              <li id="companyName" className="py-2 mt-2 pl-4">
-                Bosky Barbearia
+              <li id="companyName" className="py-2 mt-2 pl-4" onClick={()=> setPageActive('companyPage') }>
+                Pit Barbearia
               </li>
               <li id="line" className="border-t-2 mx-2 mt-2"></li>
-              <li className="py-2 mt-2 pl-4">Dashboard</li>
+              <li className="py-2 mt-2 pl-4" onClick={()=> setPageActive('Dashboard') }>Dashboard</li>
               <li className="py-2 pl-4">Minha Agenda</li>
               <li className="py-2 pl-4">Funcionários</li>
             </ul>
@@ -88,7 +86,7 @@ const Header: React.FC = () => {
         </section>
       </nav>
       <div>
-        <h3 className="text-white text-xl font-semibold">Minha Agenda</h3>
+        <h3 className="text-white text-xl font-semibold">{pageActive}</h3>
       </div>
 
       <div className="flex gap-4">

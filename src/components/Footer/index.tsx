@@ -3,8 +3,8 @@ import { useMenuContext } from "../../context/MenuContext";
 
 
 const Footer: React.FC = () => {
-  const  {windowSize,isNavOpen} = useMenuContext();
-  console.log("WIndows SIze", windowSize)
+  const  {isNavOpen} = useMenuContext();
+
 
 
   return (
