@@ -10,7 +10,7 @@ export default {
         "purple": "#413B6B",
         "purple_light": "#6735A7",
         "greenHamburguer": "#98FFA2",
-   
+
       },
       boxShadow:{
         "shadowBox" : "0px 4px 15px 5px rgba(0,0,0,0.1);"
@@ -28,6 +28,7 @@ export default {
       borderRadius: {
         'large': '36px',
       }
+      
     },
   },
   plugins: [],

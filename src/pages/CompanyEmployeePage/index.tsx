@@ -14,7 +14,7 @@ const CompanyEmployeePage: React.FC = () => {
       <div className="flex flex-col gap-6">
         <CardEmployee />
         <CardEmployee />
-        <div className="flex gap-2 justify-end">
+        <div className="flex gap-2 justify-end cursor-pointer">
           <span className="text-purple text-lg font-semibold ">
             Adicionar Funcionário
           </span>

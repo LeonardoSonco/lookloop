@@ -5,7 +5,7 @@ const CompanyAgendaPage: React.FC = () => {
   const { isNavOpen } = useMenuContext();
   return (
     <section
-      className={`flex flex-col justify-center items-center  ${
+      className={`flex flex-col justify-center items-center ${
         isNavOpen ? "pl-52 ml-1.5" : ""
       }`}
     >
