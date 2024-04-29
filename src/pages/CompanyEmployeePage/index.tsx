@@ -1,6 +1,7 @@
-import { PlusSquare } from "react-feather";
+
 import CardEmployee from "../../components/CardEmployee";
 import { useMenuContext } from "../../context/MenuContext";
+import ModalAddEmployee from "../../components/ModalAddEmployee";
 
 const CompanyEmployeePage: React.FC = () => {
   const { isNavOpen } = useMenuContext();
@@ -14,16 +15,8 @@ const CompanyEmployeePage: React.FC = () => {
       <div className="flex flex-col gap-6">
         <CardEmployee />
         <CardEmployee />
-        <div className="flex gap-2 justify-end cursor-pointer">
-          <span className="text-purple text-lg font-semibold ">
-            Adicionar Funcionário
-          </span>
-          <PlusSquare
-            color="#ffffff"
-            fill="#413B6B"
-            size={30}
-            strokeWidth={1}
-          />
+        <div className="flex gap-2 justify-end">
+          <ModalAddEmployee />
         </div>
       </div>
     </section>

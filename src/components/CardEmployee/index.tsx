@@ -1,4 +1,5 @@
 import imageEmployee from "../../assets/employee1.png";
+import ChangeButton from "../ChangeButton";
 
 import "./index.css";
 const CardEmployee: React.FC = () => {
@@ -55,6 +56,7 @@ const CardEmployee: React.FC = () => {
           </div>
         </div>
       </div>
+      <ChangeButton />
     </div>
   );
 };
