@@ -1,10 +1,11 @@
-import imageEmployee from "../../assets/employee1.png";
-import ChangeButton from "../ChangeButton";
+import imageEmployee from "../../../assets/employee1.png";
+import BoxShadow from "../../BoxShadow";
+import ChangeButton from "../../ChangeButton";
 
 import "./index.css";
 const CardEmployee: React.FC = () => {
   return (
-    <div className=" p-5 shadow-shadowBox rounded-3xl flex gap-8 ">
+    <BoxShadow>
       <div className="pr-8 border-r-2 border-gray-200">
         <div className="flex items-center gap-3">
           <img
@@ -57,7 +58,7 @@ const CardEmployee: React.FC = () => {
         </div>
       </div>
       <ChangeButton />
-    </div>
+    </BoxShadow>
   );
 };
 

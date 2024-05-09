@@ -1,5 +1,5 @@
 
-import CardEmployee from "../../components/CardEmployee";
+import CardEmployee from "../../components/Cards/CardEmployee";
 import { useMenuContext } from "../../context/MenuContext";
 import ModalAddEmployee from "../../components/ModalAddEmployee";
 

@@ -1,0 +1,18 @@
+/*flex flex-col items-center border-b-2 pb-4 mb-4 hover:border-2 hover:px-0 hover:mx-0*/
+
+.borderCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+.borderCard:hover {
+  box-sizing: border-box;
+  margin: 9px;
+  border: 1px solid black;
+  border-radius: 15px;
+  scale: 1.01;
+  transition-duration: 100ms;
+}
